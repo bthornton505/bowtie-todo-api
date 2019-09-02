@@ -1,6 +1,6 @@
 class AuthorizeApiRequest
 
-  def initialize(header = {})
+  def initialize(headers = {})
     @headers = headers
   end
 
@@ -11,6 +11,8 @@ class AuthorizeApiRequest
   end
 
   private
+
+  attr_reader :headers
 
   def user
     # check if user is in the database
