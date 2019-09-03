@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :users
+      resources :users, :projects
 
       post 'signup', to: 'users#create'
       post 'auth/login', to: 'authentication#authenticate'
