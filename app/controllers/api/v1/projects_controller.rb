@@ -12,14 +12,24 @@ class Api::V1::ProjectsController < ApplicationController
   end
 
   def show
-    project = @user.recipes.find_by(id: params[:id])
+    project = @user.projects.find_by(id: params[:id])
+    render json: project
+  end
+
+  def edit
+    project = @user.projects.find_by(id: params[:id])
+    render json: project
+  end
+
+  def update
+    project = Project.find_by(id: params[:id])
+    project.update(project_params)
     render json: project
   end
 
   def destroy
     project = Project.find_by(id: params[:id])
     project.destroy
-
     render json: project
   end
 
