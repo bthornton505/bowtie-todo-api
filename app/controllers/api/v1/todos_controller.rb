@@ -7,7 +7,7 @@ class Api::V1::TodosController < ApplicationController
   end
 
   def create
-    todo = @project.todo.create(todo_params)
+    todo = @project.todos.create(todo_params)
     json_response(todo)
   end
 
@@ -27,7 +27,7 @@ class Api::V1::TodosController < ApplicationController
   private
 
   def todo_params
-    params.permit(:title, :completed)
+    params.require(:todo).permit(:title, :project_id, :completed)
   end
 
   def set_project
