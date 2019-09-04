@@ -14,7 +14,7 @@ class Api::V1::ProjectsController < ApplicationController
   def show
     project = @user.projects.find_by(id: params[:id])
     json_response(project)
-  end
+  end 
 
   def edit
     project = @user.projects.find_by(id: params[:id])
