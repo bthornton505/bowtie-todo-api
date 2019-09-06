@@ -22,7 +22,7 @@ Assuming you have Ruby, Rails and Node.js installed,
   - Run `$ bundle install`
   - Run `$ rake db:migrate`
   - Run `$ rails server`
-- Make sure to run this before starting up [bowtie-todo-client](https://github.com/bthornton505/bowtie-todo-client)
+- Make sure to run this before starting up [bowtie-todo-client](https://github.com/bthornton505/bowtie-todo-client). You need both for the app to work properly.
 
 ## Frameworks and Libraries Used
 
