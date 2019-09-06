@@ -56,6 +56,10 @@ class Message
     "Todo created successfully"
   end
 
+  def self.todo_failed
+    "Todo unable to be created"
+  end
+
   def self.todo_updated
     "Todo successfully updated"
   end
