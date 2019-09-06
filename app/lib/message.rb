@@ -1,5 +1,15 @@
 class Message
 
+  # GENERIC SERVER MESSAGES
+
+  def self.successful_request
+    "Fetch request successful"
+  end
+
+  def self.update_failed
+    "Update failed"
+  end
+
   # AUTHENTICATION MESSAGES
   def self.not_found(record = 'record')
     "Sorry, #{record} not found."
@@ -55,6 +65,18 @@ class Message
   end
 
   # PROJECT MESSAGES
+  def self.project_created
+    "Project successfully created"
+  end
+
+  def self.project_failed
+    "Project unable to be created"
+  end
+
+  def self.project_updated
+    "Project successfully updated"
+  end
+
   def self.project_destroyed
     "Project destroyed"
   end
