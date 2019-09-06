@@ -1,27 +1,44 @@
-# bowtie-todo-api
-Todo App API for Bowtie code challenge
+# Bowtie To-Do API
 
-# README
+This is a To-Do Ruby on Rails API which serves and manages JSON data for a React frontend. This was created for a code challenge.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+As of now the available features are:
 
-Things you may want to cover:
+- **Login and Signup with JWT Tokens**
+- **API serves JSON response data with corresponding messages and status codes**
+- **API utilizes RESTful endpoints**
+- **Logged in users can maintain a list of Projects and add to-dos for them**
 
-* Ruby version
+Features soon to be added:
 
-* System dependencies
+- **Users will be able to signup/signin with a Google account**
 
-* Configuration
+## Installation:
 
-* Database creation
+Assuming you have Ruby, Rails and Node.js installed,
 
-* Database initialization
+- Fork and clone this repo
+- cd into bowtie-todo-api directory
+  - Run `$ bundle install`
+  - Run `$ rake db:migrate`
+  - Run `$ rails server`
+- Make sure to run this before starting up [bowtie-todo-client](https://github.com/bthornton505/bowtie-todo-client)
 
-* How to run the test suite
+## Frameworks and Libraries Used
 
-* Services (job queues, cache servers, search engines, etc.)
+- Back-end: [Ruby on Rails](https://github.com/rails/rails)
+- Database: [sqlite3](https://www.sqlite.org/index.html)
+- JSON Web Tokens: [jwt](https://github.com/jwt/ruby-jwt)
+- ActiveModel Serializers: [active_model_serializers](https://github.com/rails-api/active_model_serializers)
 
-* Deployment instructions
+## Author
 
-* ...
+- [Brenden Thornton](https://github.com/bthornton505)
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/bthornton505/bowtie-todo-api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+
+## License
+
+All software is available as open source under the terms of the [MIT License](https://github.com/bthornton505/bowtie-todo-api/blob/master/LICENSE).
