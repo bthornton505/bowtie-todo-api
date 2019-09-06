@@ -12,7 +12,7 @@ class Api::V1::UsersController < ApplicationController
   def find
     user = User.find_by(email: params[:email])
     if user
-      json_response(user)
+      json_response(message: Message.authorized_user, user: user)
     else
       errors = user.errors.full_message
       json_response(errors)
