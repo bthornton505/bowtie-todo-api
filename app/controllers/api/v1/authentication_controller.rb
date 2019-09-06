@@ -4,12 +4,7 @@ class Api::V1::AuthenticationController < ApplicationController
   def authenticate
     auth_token =
       AuthenticateUser.new(auth_params[:email], auth_params[:password]).call
-    json_response(auth_token: auth_token)
-  end
-
-  def check_token
-    user = AuthorizeApiRequest.new(request.headers).call[:user]
-    json_response(email: user.email)
+    json_response(message: Message.login_success, auth_token: auth_token)
   end
 
   private
@@ -17,5 +12,5 @@ class Api::V1::AuthenticationController < ApplicationController
   def auth_params
     params.permit(:email, :password)
   end
-  
+
 end
