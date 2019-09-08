@@ -7,6 +7,7 @@ WORKDIR /bowtie-todo-api
 
 COPY Gemfile /bowtie-todo-api/Gemfile
 COPY Gemfile.lock /bowtie-todo-api/Gemfile.lock
+RUN gem install bundler -v 2.0.1
 RUN bundle install
 
 COPY . /bowtie-todo-api
